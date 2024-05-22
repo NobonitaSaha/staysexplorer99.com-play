@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Experience Unmatched Thrills at America's Top Casino Hotels. Immerse yourself in the ultimate blend of luxury and excitement at America’s top casino hotels. Enjoy world-class casino hotel accommodations and premier gaming for unforgettable experiences where hospitality meets thrills.">
+		<meta name="keywords" content="Best America casino hotels, Best America casino resorts, America casino hotel booking, Casino Hotels In America">
+        
+        
+        <!-- ========== Title ========= -->
+		<title>Top Casino Hotels in America - Reserve Your Stay Now!</title>
+		
+		
+		<!-- ============ Custom Link ========= -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	  
+	  
+        <!-- ========= Google Fonts ========== -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+        <!-- ============ Icon Link ========= -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+        <!-- ====================== Cookie PopUp Start ========================== -->
+		<div class="cookie-overlay show-overlay"></div>
+		<div class="cookie-overlay-2 show-overlay-2"></div>
+		<div class="cookie-popup" id="cookiePopup">
+			<div class="cookie-description">
+				<div class="cookie-text">
+                    <img src="images/cookie.png" alt="cookie photo">
+					<h3>Are You At Least 18 Years Old?</h3>
+					<p>Please verify that you are at least 18 years old to access this website.</p>
+				</div>
+				<div class="cookie-btn">
+					<div class="cookie-double-btn">
+						<button onclick="acceptCookies()" class="cookie-accept">Yes, I am</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+        <style>
+            /* ---------------------------------- 
+                Cookie Popup CSS Start 
+            ------------------------------------- */
+            .cookie-popup {
+                display: none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                background-color: #ffffff;
+                padding: 30px 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1000;
+                color: #3b3e4a;
+                box-shadow: 0px 0px 20px 0px #e8e8e834;
+            }
+
+            .cookie-popup.show {
+                display: block;
+                max-width: 380px;
+                margin: 0 auto;
+                text-align: center;
+                padding: 10px 25px 35px 25px;
+            }
+
+            .cookie-text > img{
+                width: 100px;
+                height: auto;
+                padding: 20px 0px 20px 0px;
+            }
+
+            .cookie-text > h3 {
+                color: #000000;
+                font-size: 28px;
+                font-weight: 600;
+                font-family: 'Playfair Display', serif;
+                text-transform: capitalize;
+                line-height: 45px;
+            }
+
+            .cookie-text > p {
+                font-size: 16px;
+                line-height: 28px;
+                font-style: normal;
+                font-weight: 500;
+                color: #505050;
+                font-family: 'Inter', sans-serif;
+                margin: 15px 0px 20px 0px;
+            }
+
+            .cookie-double-btn button {
+                font-size: 16px;
+                padding: 12px 50px;
+                font-weight: 400;
+                cursor: pointer;
+                user-select: none;
+                transition-duration: 0.2s;
+                transition-timing-function: ease-in-out;
+                border: none;
+                color: #ffffff;
+                outline: 0px;
+                font-family: 'Playfair Display', serif;
+                background: #385848;
+                margin: 18px 0px 0px 0px;
+                letter-spacing: 0.4px;
+            }
+
+            .cookie-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(180deg, #344E41 0%, rgb(52 78 65 / 65%) 100%);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                z-index: 999;
+                display: none;
+            }
+
+            .cookie-overlay-2 {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(180deg, #344E41 0%, rgb(52 78 65 / 65%) 100%);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                z-index: 999;
+                display: none;
+            }
+
+            .show-overlay {
+                display: block;
+            }
+
+            .show-overlay-2 {
+                display: block;
+            }
+
+
+            @media only screen and (max-width: 600px) and (min-width: 320px) {
+                .cookie-popup.show {
+                    margin: 0px 30px;
+                }
+
+                .cookie-overlay{
+                display: none;
+                }
+
+                .cookie-text > img {
+                    width: 90px;
+                    height: auto;
+                    padding: 10px 0px;
+                }
+
+                .cookie-text > h3 {
+                    color: #2e2e2e;
+                    font-size: 25px;
+                }
+
+                .cookie-text > p {
+                    padding: 0px;
+                    font-size: 16px;
+                }
+
+                .cookie-double-btn button {
+                    padding: 10px 34px;
+                    margin: 15px 0px 0px 0px;
+                }
+            }
+
+            @media only screen and (max-width: 850px) and (min-width: 768px) {
+                .cookie-popup.show {
+                margin: 0 auto;
+                }
+
+                .cookie-overlay-2{
+                display: none;
+                }
+            }
+            
+            @media only screen and (min-width: 1025px) {
+                .cookie-overlay-2 {
+                display: none;
+                }
+            }    
+            /* ------------------------------------ 
+                Cookie Popup CSS End 
+            --------------------------------------- */
+        </style>
+
+
+        <script>
+            // ------------------- Cookie Popup JS Start -----------------------
+            document.addEventListener("DOMContentLoaded", function () {
+            if (!getCookie("acceptedCookies")) {
+                // Load background image of the popup first
+                document.querySelector(".cookie-overlay").classList.add("show-overlay");
+                document.querySelector(".cookie-overlay-2").classList.add("show-overlay-2");
+                document.getElementById("cookiePopup").classList.add("show");
+            } else {
+                // If cookies have already been accepted, remove the popup and overlay
+                document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+                document.querySelector(".cookie-overlay-2").classList.remove("show-overlay-2");
+                document.getElementById("cookiePopup").classList.remove("show");
+            }
+            });
+
+            function acceptCookies() {
+            document.getElementById("cookiePopup").classList.remove("show");
+            document.querySelector(".cookie-overlay").classList.remove("show-overlay");
+            document.querySelector(".cookie-overlay-2").classList.remove("show-overlay-2");
+            setCookie("acceptedCookies", true, 30);
+
+            // Load content after accepting cookies
+            setTimeout(function () {
+                console.log("Content uploaded after 3 seconds");
+                // Add your code here to load website images and content
+            }, 3000);
+            }
+
+            function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+            }
+            // ------------------- Cookie Popup JS End -----------------------
+        </script>
+        <!-- ==================== Cookie PopUp End ============================== -->
+    </head>
+
+    <body>
+        <main>
+            <!-- ========== Home Section Start ========= -->
+            <section id="home-section" class="home">
+                <div class="container">
+                    <div class="home-content">
+                        <h1>Experience Unmatched Thrills at America's Top Casino Hotels</h1>
+
+                        <p>Immerse yourself in the ultimate blend of luxury and excitement at America’s top casino hotels. Enjoy world-class casino hotel accommodations and premier gaming for unforgettable experiences where hospitality meets thrills.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- ========== Home Section End ========= -->
+            
+
+
+            <!-- ========== Book Section Start ========= -->
+            <section class="book" id="book">
+                <div class="container flex">
+                    <form id="myForm">
+                        
+                        <div class="input grid">
+                            <div class="box">
+                                <label>Check-in:</label>
+                                <input type="date">
+                            </div>
+                            
+                            <div class="box">
+                                <label>Check-out:</label>
+                                <input type="date">
+                            </div>
+                            
+                            <div class="box">
+                                <label>Adults:</label> <br>
+                                <input type="number" placeholder="0">
+                            </div>
+                            
+                            <div class="box">
+                                <label>Email:</label> <br>
+                                <input type="email" placeholder="Your Email">
+                            </div>
+                            
+                            
+                            <div class="search">
+                                <input type="submit" value="SUBMIT" onclick="showConfirmation()">
+                            </div>
+                        </div>
+                        
+                    </form>	
+                </div>
+            </section>
+            
+            <!-- ========== Submit Popup ============= -->
+            <div id="confirmationPopup" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close" onclick="closePopup()">&times;</span>
+                    <p>Form submitted successfully!</p>
+                </div>
+            </div>
+            <!-- =========== Book Section End ========= -->
+
+
+            <!-- =========== About Section Start ================ -->
+            <section id="about-section" class="about">
+                <div class="container">
+                    <div class="about-content">
+                        <div class="about-img-part">
+                            <img src="images/about.png" alt="about photo">
+                        </div>
+
+                        <div class="about-context-part">
+                            <h2>Discover Luxury at America's Best Casino Hotels 2024</h2>
+                            <p>
+                                Embark on an extraordinary voyage through the lavish realms of America's premier casino hotels, where opulence and excitement converge to create an unparalleled symphony of indulgence. From the moment you step foot into these iconic destinations, you are greeted by the resplendent magnificence that defines the essence of our esteemed casino hotels, casting an enchanting spell upon every guest fortunate enough to experience their grandeur.
+                            </p>
+
+                            <p>
+                                Yet, the allure of these illustrious establishments extends far beyond the captivating thrills of the gaming floor. Delve into a haven of unparalleled comfort and sophistication, where every corner whispers tales of luxury and refinement. Experience unparalleled indulgence in our meticulously curated accommodations, where every detail ensures an unforgettable stay. As the sun sets and the night unfolds, surrender to the intoxicating blend of elegance and exhilaration, as artisanal cocktails and heart-pounding gaming experiences set the stage for unforgettable memories. Experience the epitome of sophistication and excitement as you explore the vibrant tapestry of America's casino hotels, where each visit promises to be an unforgettable adventure in luxury and indulgence.
+                            </p>
+
+                            
+                            <div class="section-description">
+                                <button>More Details</button>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- =========== About Section End ================== -->
+
+
+
+            <!-- ========== Gallery Section Start ========= -->
+            <section id="gallery-section" class="gallery">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="section-title">
+                            <h2>Embark on a Visual Gallery Tour of America's Casino Hotels</h2> 
+                        </div>
+
+                        <div class="section-description">
+                            <p>Step into our exclusive casino hotel gallery, a showcase of unparalleled elegance, opulence, and unique allure that defines our distinguished establishment.</p>
+                            <button>More Details</button>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-images">
+                        <div class="grid-img-1">
+                            <img src="images/gallery-01.jpeg" alt="gallery-01">
+                        </div>
+                        <div class="grid-img-2">
+                            <img src="images/gallery-2.jpeg" alt="gallery-2">
+                            <img src="images/gallery-3.jpeg" alt="gallery-3">
+                            
+                        </div>
+                        <div class="grid-img-3">
+                            <img src="images/gallery-04.jpeg" alt="gallery-04">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ========== Gallery Section End ========= -->
+
+
+            
+            <!-- ========== Room Section Start ========= -->
+            <section id="room-section" class="room">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="section-title">
+                            <h2>Luxuriate in Exquisite Suites at America's Top Casino Hotels</h2> 
+                        </div>
+
+                        <div class="section-description">
+                            <p>In our lavish casino hotel, each room is a haven of opulence, boasting plush bedding, stylish furnishings, and breathtaking views to elevate your stay to unparalleled heights of luxury and comfort.</p>
+                            <button>More Details</button>
+                        </div>
+                    </div>
+
+
+                    <div class="room-content">
+                        <div class="room-card">
+                            <div class="card-img">
+                                <img src="images/Room-no-001.jpeg" alt="Room-no-001">
+                            </div>
+                            <div class="card-description">
+                                <h3>Casino Hotel Suite Room</h3>
+                                <p>from<span>$250/night</span></p>
+                                <small>35 sq <span>|</span> 2-3 guests  <span>|</span>  free breakfast</small>
+                            </div>
+                        </div>
+                        
+                        <div class="room-card">
+                            <div class="card-img">
+                                <img src="images/Room-no-002.jpeg" alt="Room-no-002">
+                            </div>
+                            <div class="card-description">
+                                <h3>Casino Hotel Luxury Room</h3>
+                                <p>from<span>$250/night</span></p>
+                                <small>35 sq <span>|</span> 2-3 guests  <span>|</span>  free breakfast</small>
+                            </div>
+                        </div>
+
+                        <div class="room-card room-card-03">
+                            <div class="card-img">
+                                <img src="images/Room-no-003.jpeg" alt="Room-no-003">
+                            </div>
+                            <div class="card-description">
+                                <h3>Casino Hotel Deluxe Room</h3>
+                                <p>from<span>$250/night</span></p>
+                                <small>35 sq <span>|</span> 2-3 guests  <span>|</span>  free breakfast</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- ========== Room Section End ========= -->
+
+
+
+            <!-- ======== Animates Section Start ======== -->
+            <section id="animates-section" class="animates">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="section-title">
+                            <h2>Unearth Distinctive Offerings at Our Exclusive Casino Hotel</h2> 
+                        </div>
+
+                        <div class="section-description">
+                            <p>In our casino hotel, we prioritize seamless, delightful experiences that go beyond expectations, ensuring every guest leaves with lasting satisfaction.</p>
+                            <button>More Details</button>
+                        </div>
+                    </div>
+
+
+                    <div class="animates-content">
+
+                        <div class="animates-card card-01">
+                            <div class="animates-img">
+                                <img src="images/animates-1.png" alt="animates-1 photo">
+                            </div>
+
+                            <div class="animates-description">
+                                <ul>
+                                    <li>
+                                        <div class="list-num">
+                                            <small>01.</small>
+                                        </div>
+
+                                        <div class="list-des">
+                                            <h3>Luxurious Spa Retreat at the Heart of Our Casino Hotel</h3>
+                                            <p>Revel in personalized indulgence at our exquisite casino hotel, where a curated array of treatments awaits. From serene massages to invigorating facials, elevate your stay with revitalizing experiences tailored just for you.</p>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="animates-card card-01">
+                            <div class="animates-img">
+                                <img src="images/animates-2.png" alt="animates-2 photo">
+                            </div>
+
+                            <div class="animates-description">
+                                <ul>
+                                    <li>
+                                        <div class="list-num">
+                                            <small>02.</small>
+                                        </div>
+
+                                        <div class="list-des">
+                                            <h3>Thrilling Casino Action Awaits at Our Hotel</h3>
+                                            <p>Dive into the captivating atmosphere of our premier American casino hotel, where luxury intertwines with excitement at every corner. Indulge the gaming experiences at American Casino Hotel's vibrant casino hotel scene.</p>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="animates-card card-01">
+                            <div class="animates-img">
+                                <img src="images/animates-3.png" alt="animates-3 photo">
+                            </div>
+
+                            <div class="animates-description">
+                                <ul>
+                                    <li>
+                                        <div class="list-num">
+                                            <small>03.</small>
+                                        </div>
+
+                                        <div class="list-des">
+                                            <h3>Dive at Our Casino Hotel's Open-Air Swimming Pool</h3>
+                                            <p>Within our distinctive casino hotel, discover a shimmering oasis in the form of our outdoor swimming pool, beckoning both leisure and business travelers alike. Take a refreshing dip in the impressive estuary of this aquatic sanctuary.</p>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="animates-card card-02">
+                            <div class="animates-img">
+                                <img src="images/animates-4.png" alt="animates-4 photo">
+                            </div>
+
+                            <div class="animates-description">
+                                <ul>
+                                    <li>
+                                        <div class="list-num">
+                                            <small>04.</small>
+                                        </div>
+
+                                        <div class="list-des">
+                                            <h3>Cafe & Restaurant at Casino Hotel Excellence Awaits</h3>
+                                            <p>Experience the culinary magic at our acclaimed casino hotel restaurant, where expert chefs craft a menu to delight. Immerse yourself in a symphony of flavors, blending local and international tastes for a truly captivating dining journey.</p>
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- ============== Animates Section End ================= -->
+
+
+
+            <!-- =========== Communication Section Start ========== -->
+            <section class="communication top">
+                <div class="container">
+                    <div class="text">
+                        <div class="heading">
+                            <h2>Customer Experiences at Our Casino Hotel</h2>
+                        </div>
+
+                        <div class="para">
+                            <p>Experience our casino hotel's idyllic beachfront, celebrated by guests for its picturesque beauty. From the attentive staff to delightful balcony breakfasts and spacious rooms with breathtaking views, every detail exceeds expectations. Complimentary beach amenities add to the allure, while a nearby prehistoric town site offers intriguing exploration just steps away.</p>
+
+                            <div class="box flex">
+                                <div class="img">
+                                    <img src="images/client.png" alt=" client says">
+                                </div>
+                                
+                                <div class="name">
+                                    <h5>Stoodwithhat</h5>
+                                    <h5>Australia</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- =========== Communication Section End ========= -->
+
+
+
+            <!-- ========== Footer Section Start ========== -->
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+                
+                        <div class="footer-btn-group">
+                            <button type="button" class="footer-btn wow fadeInUp" data-wow-duration="1.5s" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Terms of Service
+                            </button>
+                            
+                            <button type="button" class="footer-btn wow fadeInUp" data-wow-duration="1.5s" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Privacy Policy
+                            </button>
+                        </div>
+                        
+                        <div class="footer-terms">
+                            <!-- ======== Modal PopUp ======= -->
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                    
+                                        <!-- === Modal Header == -->
+                                        <div class="modal-header">
+                                            <h2 class="modal-title">Privacy Policy</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        
+                                        
+                                        <!-- === Modal Body === -->
+                                        <div class="modal-body">
+                                        
+                                            <div>
+                                                <h3 class="footer-title">Privacy Policy for staysexplorer99.com</h3>
+                                                <p class="footer-text">
+                                                    At staysexplorer99.com, accessible from staysexplorer99.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by staysexplorer99.com and how we use it.
+                                                    <br><br>
+                                                    If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
+                                                </p>
+                                            </div>
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">General Data Protection Regulation (GDPR)</h3>
+                                                <p class="footer-text">
+                                                    We are a Data Controller of your information.
+                                                    <br><br>
+                                                    staysexplorer99.com legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
+                                                </p>
+                                                
+                                                <ul class="list-icon">
+                                                
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> staysexplorer99.com needs to perform a contract with you
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> You have given staysexplorer99.com permission to do so
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> Processing your personal information is in staysexplorer99.com legitimate interests
+
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> staysexplorer99.com needs to comply with the law
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            
+                                            
+                                            <div>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
+                                                    <br><br>
+                                                    If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.
+                                                    <br><br>
+                                                    In certain circumstances, you have the following data protection rights:
+                                                </p>
+                                                
+                                                <ul class="list-icon">
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> The right to access, update or to delete the information we have on you.
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> The right of rectification.
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> The right to object.
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> The right of restriction.
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> The right to data portability
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> The right to withdraw consent
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Log Files</h3>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+                                                </p>
+                                            </div>	
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Cookies and Web Beacons</h3>
+                                                <p class="footer-text">
+                                                    Like any other website, staysexplorer99.com uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Privacy Policies</h3>
+                                                <p class="footer-text">
+                                                    You may consult this list to find the Privacy Policy for each of the advertising partners of staysexplorer99.com.
+                                                    <br>
+                                                    Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on staysexplorer99.com, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+                                                    <br>
+                                                    Note that staysexplorer99.com has no access to or control over these cookies that are used by third-party advertisers.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Third Party Privacy Policies</h3>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
+                                                    <br><br>
+                                                    You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+                                                    
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Children's Information</h3>
+                                                <p class="footer-text">
+                                                    Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+                                                    <br><br>
+                                                    staysexplorer99.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Online Privacy Policy Only</h3>
+                                                <p class="footer-text">
+                                                    Our Privacy Policy created at GDPRPrivacyPolicy.net) applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in staysexplorer99.com. This policy is not applicable to any information collected offline or via channels other than this website.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">Consent</h3>
+                                                <p class="footer-text">
+                                                    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+                                                </p>
+                                            </div>	
+                                            
+                                            
+                                        </div>
+                    
+                                        <!-- === Modal Footer === -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div  class="footer-policy">
+                            <!-- ======== Modal PopUp ======= -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg  modal-sm">
+                                    <div class="modal-content">
+                                    
+                                        <!-- == Modal Header == -->
+                                        <div class="modal-header">
+                                            <h2 class="modal-title" id="exampleModalLabel">Terms of Service</h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                            
+                                        <div class="modal-body">
+                                            <h3 class="footer-title">Website Terms and Conditions of Use</h3><br>
+                                            
+                                            <div>
+                                                <h3 class="footer-title">1. Terms</h3>
+                                                <p class="footer-text">
+                                                    By accessing this Website, accessible from staysexplorer99.com, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+                                                </p>
+                                            </div>
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">2. Use License</h3>
+                                                <p class="footer-text">
+                                                    Permission is granted to temporarily download one copy of the materials on staysexplorer99.com's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                                                    <br><br>
+                                                </p>
+                                                
+                                                
+                                                <ul class="list-icon">
+                                                
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> modify or copy the materials;
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                        <i class="fa-solid fa-check"></i>
+                                                        </span> use the materials for any commercial purpose or for any public display;
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> attempt to reverse engineer any software contained on staysexplorer99.com's Website;
+
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> remove any copyright or other proprietary notations from the materials; or
+                                                    </li>
+
+                                                    <li>
+                                                        <span class="icon background-transparent">
+                                                            <i class="fa-solid fa-check"></i>
+                                                        </span> transferring the materials to another person or "mirror" the materials on any other server.
+                                                    </li>
+                                                </ul><br>
+                                                
+                                                
+                                                <p class="footer-text">
+                                                    This will let staysexplorer99.com to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format.
+                                                    
+                                                </p>
+                                            </div>
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">3. Disclaimer</h3>
+                                                <p class="footer-text">
+                                                    All the materials on staysexplorer99.com's Website are provided "as is". staysexplorer99.com makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, staysexplorer99.com does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+                                                </p>
+                                            </div>	
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">4. Limitations</h3>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on staysexplorer99.com’s Website, even if staysexplorer99.com or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">5. Revisions and Errata</h3>
+                                                <p class="footer-text">
+                                                    The materials appearing on staysexplorer99.com’s Website may include technical, typographical, or photographic errors. staysexplorer99.com will not promise that any of the materials in this Website are accurate, complete, or current. staysexplorer99.com may change the materials contained on its Website at any time without notice. staysexplorer99.com does not make any commitment to update the materials.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">6. Links</h3>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by staysexplorer99.com of the site. The use of any linked website is at the user’s own risk.
+                                                    
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">7. Site Terms of Use Modifications</h3>
+                                                <p class="footer-text">
+                                                    staysexplorer99.com may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">8. Your Privacy</h3>
+                                                <p class="footer-text">
+                                                    Please read our Privacy Policy.
+                                                </p>
+                                            </div>		
+                                            
+                                            
+                                            <div>
+                                                <h3 class="footer-title">9. Governing Law</h3>
+                                                <p class="footer-text">
+                                                    Any claim related to staysexplorer99.com's Website shall be governed by the laws of ar without regards to its conflict of law provisions.
+                                                </p>
+                                            </div>	
+                                            
+                                        </div>
+                                        
+                                        <!-- == Modal Footer == -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+            </section>
+            <!-- =========== Footer Section End =========== -->
+		
+        </main>
+
+        <!-- ========== Script Link =========== -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+			// Function to open the popup (Submit Popup)
+			function openPopup() {
+				document.getElementById('confirmationPopup').style.display = 'block';
+			}
+
+			// Function to close the popup
+			function closePopup() {
+				document.getElementById('confirmationPopup').style.display = 'none';
+			}
+
+			// Attach an event listener to the form
+			document.getElementById('myForm').addEventListener('submit', function (event) {
+				// Prevent the default form submission
+				event.preventDefault();
+
+				// Perform your form submission logic here
+
+				// Open the popup after form submission
+				openPopup();
+			});
+		</script>
+    </body>
+</html>

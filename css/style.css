@@ -1,0 +1,630 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.section-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title{
+    width: 600px;
+}
+
+.section-description{
+    width: 400px;
+}
+
+.section-title > h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2D2D2D;
+    font-size: 45px;
+    font-weight: 500;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    line-height: 65px;
+    text-transform: capitalize;
+}
+
+.section-description > p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: 1px;
+    line-height: 28px;
+    color: #6E6E6E;
+    margin-top: 10px;
+}
+
+.section-description > button{
+    font-family: 'Playfair Display', serif;
+    background:  #385848;
+    padding: 12px 30px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    outline: 0px;
+    border: 0px;
+    word-spacing: 1px;
+}
+
+
+
+/* ------------------
+    Home Start
+--------------------- */
+.home{
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+    width: 100%;
+    height: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.home::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #344E41 0%, rgb(7 2 17 / 40%) 100%);
+    z-index: -1;
+}
+
+.home-content{
+    padding: 170px 0px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.home-content > h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    line-height: 95px;
+    word-spacing: 4px;
+}
+
+.home-content > p{
+    font-family:  'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 1px;
+    line-height: 28px;
+    padding: 0px 150px;
+}
+/* -----------------
+    Home End
+-------------------- */
+
+
+
+/*-------------------
+	Book Start
+--------------------- */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+
+    color: white;
+}
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 30px;
+}
+
+.book {
+    width: 100%;
+    color: white;
+    top: -80px;
+    position: relative;
+    z-index: 1;
+}
+
+.box label {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.book .input {
+	background: #344E41;
+	padding: 30px 30px 50px 30px;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+}
+
+.book .search {
+    background: #588157;
+    padding: 20px;
+    margin: -30px 30px -50px 30px;
+	width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    background: #385848;
+    margin-top: 20px !important;
+    color: white;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 14px !important;
+}
+
+::placeholder {
+	color: white;
+}
+
+.book .search input {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 22px !important;
+    margin-top: 38px !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89/10%);
+    padding: 20px 20px;
+}
+
+.popup-content {
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 28px;
+    padding: 20px;
+    word-spacing: 2px;
+    font-weight: 600;
+}
+
+.popup-close {
+    color: #f10000;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 260px;
+}
+
+.popup-close:hover,
+.popup-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*-------------------
+	Book End
+--------------------- */
+
+
+/* --------------------
+    About Start
+----------------------- */
+.about {
+    padding: 30px 0px 80px 0px;
+}
+
+.about-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.about-img-part > img {
+    width: 100%;
+    height: auto;
+}
+
+.about-context-part > h2{    
+    font-family: 'Playfair Display', serif;
+    color: #2D2D2D;
+    font-size: 45px;
+    font-weight: 500;
+    word-spacing: 2px;
+    line-height: 65px;
+    text-transform: capitalize;
+}
+
+.about-context-part > p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: rgb(110, 110, 110);
+    font-weight: 400;
+    line-height: 30px;
+    margin: 30px 0px;
+}
+/* ---------------------
+    About End
+------------------------ */
+
+
+
+/*-------------------
+    Gallery Start 
+---------------------- */
+.gallery{
+    padding: 20px 0px 100px 0px;
+}
+
+.gallery-images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 80px;
+}
+
+.grid-img-1 > img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-img-2 > img {
+    width: 100%;
+    margin-bottom: 16px;
+    height: calc( (100% - 16px)/2 );
+}
+
+.grid-img-3 > img{
+    width: 100%;
+    height: auto;
+}
+/* ---------------------
+    Gallery End
+------------------------ */
+
+
+
+/*-------------------
+    Room Start 
+---------------------- */
+.room {
+    background: #DBEBE1;
+    padding: 80px 0px 100px 0px;
+}
+
+.room-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 80px;
+}
+
+.room-card{
+    background: #f9f9f9;
+}
+
+.card-img > img{
+    width: 100%;
+    height: auto;
+}
+
+.card-description{
+    padding: 30px 20px;
+}
+
+.card-description > h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #2D2D2D;
+    font-weight: 500;
+}
+
+.card-description > p{
+    font-family: 'Playfair Display', serif;
+    margin: 10px 0px;
+}
+
+.card-description p > span {
+    margin: 0px 10px;
+    color: #385848;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.card-description > small{
+    font-family:  'Inter', sans-serif;
+    font-size: 13px;
+}
+
+.card-description small > span{
+    margin: 0px 8px;
+}
+/*-------------------
+    Room End
+---------------------- */
+
+
+
+/* ---------------------
+    Animates Start
+------------------------ */
+.animates{
+    padding: 100px 0px 80px 0px;
+}
+.animates-content{
+    margin-top: 10px;
+}
+
+.animates-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.card-01 {
+    padding: 80px 0px 40px 0px;
+    border-bottom: 1px solid #8080802e;
+}
+
+.card-02 {
+    padding: 60px 0px 20px 0px;
+}
+
+.animates-img{
+    width: 50%;
+}
+
+.animates-img > img{
+    width: 100%;
+    height: auto;
+}
+
+.animates-description{
+    width: 60%;
+}
+
+.animates-description ul > li{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.animates-description ul li > .list-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #385848;
+    font-weight: 800;
+    margin-top: -18px;
+}
+
+.animates-description ul li .list-des > h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #3c3838;
+    font-weight: 500;
+    margin-bottom: 30px;
+    line-height: 50px;
+    margin-top: -8px;
+}
+
+.animates-description ul li .list-des > p{
+    font-family:  'Inter', sans-serif;
+    font-size: 16px;
+    color: rgb(110, 110, 110);
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.animates-description ul li .list-des > i {
+    margin: 25px 0px;
+    color: #385848;
+    font-size: 24px;
+}
+
+/* -----------------------
+    Animates End
+------------------------ */
+
+
+
+/*---------------------------
+	Communication Start
+-----------------------------*/
+.communication {
+	background-image: url("../images/communication-banner.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 480px;
+	position: relative;
+    margin: 40px 0px 160px 0px;
+}
+
+.communication .text {
+    background: #385848;
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    padding: 60px 50px;
+    color: white;
+    transform: translateY(-50%);
+}
+
+.communication .heading h5 {
+    color: white !important;
+}
+
+.communication h2 {
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #fff;
+    line-height: 60px;
+}
+
+.communication p {
+    margin: 20px 0 50px 0;
+    font-size: 16px;
+    font-family: 'Roboto Slab';
+    line-height: 32px;
+    letter-spacing: 0.2px;
+}
+
+.communication img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+
+.communication .para h5 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+    font-family: 'Playfair Display';
+    letter-spacing: 0.6px;
+}
+
+.communication p {
+    margin: 35px 0px 50px;
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    color: #f5ebeb;
+}
+/*---------------------------
+	Communication End
+-----------------------------*/
+
+
+
+/* --------------------------
+	Footer Section Start
+---------------------------- */
+.footer {
+    padding: 50px 0px 40px 0px;
+    background: #DBEBE1;
+}
+
+.footer-btn-group {
+    text-align: center;
+}
+
+button.footer-btn {
+    outline: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0px 8px;
+    font-family: 'Playfair Display', serif;
+    word-spacing: 1px;
+    letter-spacing: 0.4px;
+}
+
+/* -- Footer Modal PopUp Start -- */
+h2.modal-title {
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'Playfair Display';
+    margin: 8px 0px;
+}
+
+h3.footer-title {
+    font-family: 'Playfair Display';
+    font-size: 22px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+p.footer-text {
+    font-family: 'Inter';
+    font-size: 15px;
+    color: #7a7a7a;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0px;
+    word-spacing: 1px;
+}
+
+ul.list-icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.list-icon li {
+    display: flex;
+    align-items: center;
+    margin: 15px 20px;
+    color: #7a7a7a;
+    font-family: 'Inter';
+    font-size: 15px;
+    letter-spacing: 0px;
+    line-height: 20px;
+}
+
+ul.list-icon li .icon {
+    width: 25px;
+    height: 20px;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    margin-right: -8px;
+    min-width: 30px;
+    font-size: 20px;
+    margin-top: -2px;
+}
+
+span.icon.background-transparent i {
+    font-size: 15px;
+}
+
+.btn-close {
+    padding: 20px 30px !important;
+	outline: none !important;
+}
+
+.btn-close:focus {
+    box-shadow: none !important;
+}
+
+button.btn.btn-danger {
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+}
+/* -- Footer Modal PopUp End -- */
+
+/* --------------------------
+	Footer Section End
+---------------------------- */
+
+
+
